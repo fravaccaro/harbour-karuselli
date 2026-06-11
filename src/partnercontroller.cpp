@@ -80,6 +80,7 @@ void PartnerController::reload()
 
 bool PartnerController::apply()
 {
+    const bool wasActive = m_savedEnabled && !m_savedPaths.isEmpty();
     const QStringList paths = currentPathsForSave();
     if (!m_store.savePaths(paths)) {
         emit applyFailed();
@@ -92,8 +93,12 @@ bool PartnerController::apply()
     if (!m_enabled)
         m_selectedAppsModel.clear();
 
-    m_showRestartHint = true;
-    emit showRestartHintChanged();
+    const bool nowActive = m_savedEnabled;
+    const bool showHint = !wasActive && nowActive;
+    if (m_showRestartHint != showHint) {
+        m_showRestartHint = showHint;
+        emit showRestartHintChanged();
+    }
     emit partnerSpaceActiveChanged();
     updateDirty();
     return true;

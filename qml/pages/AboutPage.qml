@@ -16,7 +16,11 @@ A.AboutPageBase {
     extraSections: [
         A.InfoSection {
             title: qsTr("Partner space")
-            text: qsTr("After Apply, restart the Home screen from the pulley menu to see your chosen apps.")
+            text: qsTr("When you enable the partner space, restart the Home screen from the pulley menu to activate it. Changing the app list does not require a restart.")
+        },
+        A.InfoSection {
+            title: qsTr("Native apps")
+            text: qsTr("Some native apps show a transparent background in the partner space. This is a Sailfish OS bug, not a Karuselli bug. To display them correctly, install the Patchmanager patch “Blur Partnerspace Background”.")
         },
         A.InfoSection {
             title: qsTr("Distribution")

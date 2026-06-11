@@ -8,7 +8,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>After Apply, restart the Home screen from the pulley menu to see your chosen apps.</source>
+        <source>When you enable the partner space, restart the Home screen from the pulley menu to activate it. Changing the app list does not require a restart.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Native apps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Some native apps show a transparent background in the partner space. This is a Sailfish OS bug, not a Karuselli bug. To display them correctly, install the Patchmanager patch “Blur Partnerspace Background”.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -156,7 +164,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Changes saved. Restart the Home screen from the pulley menu to see them.</source>
+        <source>Partner space enabled. Restart the Home screen from the pulley menu to activate it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Native apps may look transparent on the Home screen. Install “Blur Partnerspace Background” from Patchmanager.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

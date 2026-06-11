@@ -25,7 +25,12 @@ Page {
 
         MuotoTextLabel {
             visible: partnerController.showRestartHint
-            text: qsTr("Changes saved. Restart the Home screen from the pulley menu to see them.")
+            text: qsTr("Partner space enabled. Restart the Home screen from the pulley menu to activate it.")
+        }
+
+        MuotoTextLabel {
+            visible: partnerController.partnerSpaceEnabled
+            text: qsTr("Native apps may look transparent on the Home screen. Install “Blur Partnerspace Background” from Patchmanager.")
         }
 
         ButtonLayout {

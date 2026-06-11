@@ -8,8 +8,16 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>After Apply, restart the Home screen from the pulley menu to see your chosen apps.</source>
-        <translation type="unfinished"></translation>
+        <source>When you enable the partner space, restart the Home screen from the pulley menu to activate it. Changing the app list does not require a restart.</source>
+        <translation>Wenn du den Partnerbereich aktivierst, starte den Home-Bildschirm über das Pulley-Menü neu, um ihn zu aktivieren. Änderungen an der App-Liste erfordern keinen Neustart.</translation>
+    </message>
+    <message>
+        <source>Native apps</source>
+        <translation>Native Apps</translation>
+    </message>
+    <message>
+        <source>Some native apps show a transparent background in the partner space. This is a Sailfish OS bug, not a Karuselli bug. To display them correctly, install the Patchmanager patch “Blur Partnerspace Background”.</source>
+        <translation>Einige native Apps zeigen im Partnerbereich einen transparenten Hintergrund. Das ist ein Sailfish-OS-Fehler, kein Karuselli-Fehler. Installiere den Patchmanager-Patch „Blur Partnerspace Background“, um sie korrekt anzuzeigen.</translation>
     </message>
     <message>
         <source>Distribution</source>
@@ -156,8 +164,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Changes saved. Restart the Home screen from the pulley menu to see them.</source>
-        <translation type="unfinished"></translation>
+        <source>Partner space enabled. Restart the Home screen from the pulley menu to activate it.</source>
+        <translation>Partnerbereich aktiviert. Starte den Home-Bildschirm über das Pulley-Menü neu, um ihn zu aktivieren.</translation>
+    </message>
+    <message>
+        <source>Native apps may look transparent on the Home screen. Install “Blur Partnerspace Background” from Patchmanager.</source>
+        <translation>Native Apps können auf dem Home-Bildschirm transparent wirken. Installiere „Blur Partnerspace Background“ aus dem Patchmanager.</translation>
     </message>
     <message>
         <source>Partner slot %1 · App not found</source>
