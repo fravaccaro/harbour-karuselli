@@ -168,10 +168,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>No apps selected. Tap Add app.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Add app</source>
         <translation type="unfinished"></translation>
     </message>
@@ -189,6 +185,14 @@
     </message>
     <message>
         <source>Support Karuselli</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No apps selected. Add apps from the pulley menu.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Disable partner space</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

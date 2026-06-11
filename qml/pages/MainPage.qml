@@ -24,14 +24,6 @@ Page {
                 title: "Karuselli"
             }
 
-            TextSwitch {
-                x: Theme.horizontalPageMargin
-                width: parent.width - 2 * Theme.horizontalPageMargin
-                text: qsTr("Enable partner space")
-                checked: partnerController.partnerSpaceEnabled
-                onCheckedChanged: partnerController.partnerSpaceEnabled = checked
-            }
-
             LabelSpacer { }
 
             MuotoTextLabel {
@@ -49,7 +41,7 @@ Page {
                 visible: partnerController.partnerSpaceEnabled
                          && partnerController.selectedCount === 0
                 color: Theme.secondaryColor
-                text: qsTr("No apps selected. Tap Add app.")
+                text: qsTr("No apps selected. Add apps from the pulley menu.")
             }
         }
 
@@ -60,14 +52,6 @@ Page {
             preferredWidth: Theme.buttonWidthSmall
 
             Button {
-                visible: partnerController.partnerSpaceEnabled
-                text: qsTr("Add app")
-                enabled: partnerController.selectedAppsModel.count < partnerController.maxCount
-                onClicked: pageStack.push(Qt.resolvedUrl("AppPickerPage.qml"))
-            }
-
-            Button {
-                ButtonLayout.newLine: false
                 text: qsTr("Apply")
                 enabled: partnerController.dirty
                 onClicked: {
@@ -126,6 +110,19 @@ Page {
         VerticalScrollDecorator {}
 
         PullDownMenu {
+            MenuItem {
+                text: partnerController.partnerSpaceEnabled
+                      ? qsTr("Disable partner space")
+                      : qsTr("Enable partner space")
+                onClicked: partnerController.partnerSpaceEnabled =
+                           !partnerController.partnerSpaceEnabled
+            }
+            MenuItem {
+                text: qsTr("Add app")
+                enabled: partnerController.partnerSpaceEnabled
+                         && partnerController.selectedAppsModel.count < partnerController.maxCount
+                onClicked: pageStack.push(Qt.resolvedUrl("AppPickerPage.qml"))
+            }
             MenuItem {
                 text: qsTr("Restart homescreen")
                 onClicked: {
