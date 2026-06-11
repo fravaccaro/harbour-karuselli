@@ -188,11 +188,23 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>No apps selected. Add apps from the pulley menu.</source>
+        <source>Disable partner space</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Disable partner space</source>
+        <source>No apps selected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Partner space disabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pull down to add an app</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Swipe down to enable the partner space</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

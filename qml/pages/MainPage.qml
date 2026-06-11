@@ -30,19 +30,6 @@ Page {
                 visible: partnerController.showRestartHint
                 text: qsTr("Changes saved. Restart the homescreen from the pulley menu to see them.")
             }
-
-            LabelSpacer {
-                visible: partnerController.showRestartHint
-                         && partnerController.partnerSpaceEnabled
-                         && partnerController.selectedCount === 0
-            }
-
-            MuotoTextLabel {
-                visible: partnerController.partnerSpaceEnabled
-                         && partnerController.selectedCount === 0
-                color: Theme.secondaryColor
-                text: qsTr("No apps selected. Add apps from the pulley menu.")
-            }
         }
 
         footer: ButtonLayout {
@@ -65,6 +52,18 @@ Page {
             id: viewDragHandler
             listView: selectedAppsView
             active: partnerController.partnerSpaceEnabled
+        }
+
+        ViewPlaceholder {
+            enabled: !partnerController.partnerSpaceEnabled
+                     || (partnerController.partnerSpaceEnabled
+                         && partnerController.selectedCount === 0)
+            text: partnerController.partnerSpaceEnabled
+                  ? qsTr("No apps selected")
+                  : qsTr("Partner space disabled")
+            hintText: partnerController.partnerSpaceEnabled
+                      ? qsTr("Pull down to add an app")
+                      : qsTr("Swipe down to enable the partner space")
         }
 
         delegate: D.TwoLineDelegate {
