@@ -62,6 +62,4 @@ INSTALLS += images
 CONFIG += sailfishapp_i18n
 
 # Locale-specific translation files (compiled to .qm on build).
-TRANSLATIONS += \
-    translations/harbour-karuselli-en.ts \
-    translations/harbour-karuselli-it.ts
+TRANSLATIONS +=  translations/*.ts
