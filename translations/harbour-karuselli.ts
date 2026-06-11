@@ -53,7 +53,7 @@
 <context>
     <name>CoverPage</name>
     <message>
-        <source>%1/%2 apps</source>
+        <source>Enabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -2,21 +2,36 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 CoverBackground {
-    Label {
+    Column {
         anchors.centerIn: parent
-        horizontalAlignment: Text.AlignHCenter
-        color: Theme.primaryColor
-        text: partnerController.partnerSpaceActive
-              ? qsTr("%1/%2 apps").arg(partnerController.savedAppCount).arg(partnerController.maxCount)
-              : qsTr("Disabled")
-    }
+        width: parent.width - 2 * Theme.horizontalPageMargin
+        spacing: Theme.paddingSmall
 
-    CoverActionList {
-        id: coverAction
+        Label {
+            width: parent.width
+            horizontalAlignment: Text.AlignHCenter
+            color: Theme.primaryColor
+            visible: !partnerController.partnerSpaceEnabled
+                     || partnerController.selectedCount === 0
+            text: partnerController.partnerSpaceEnabled
+                  ? qsTr("Enabled")
+                  : qsTr("Disabled")
+        }
 
-        CoverAction {
-            iconSource: "image://theme/icon-cover-new"
-            onTriggered: applicationWindow.activate()
+        Repeater {
+            model: partnerController.partnerSpaceEnabled
+                   && partnerController.selectedCount > 0
+                   ? partnerController.selectedAppsModel
+                   : null
+
+            Label {
+                width: parent.width
+                horizontalAlignment: Text.AlignHCenter
+                color: Theme.primaryColor
+                text: name
+                elide: Text.ElideRight
+                maximumLineCount: 1
+            }
         }
     }
 }

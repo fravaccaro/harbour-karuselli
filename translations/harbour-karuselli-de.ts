@@ -53,12 +53,12 @@
 <context>
     <name>CoverPage</name>
     <message>
-        <source>%1/%2 apps</source>
-        <translation type="unfinished"></translation>
+        <source>Enabled</source>
+        <translation>Aktiviert</translation>
     </message>
     <message>
         <source>Disabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Deaktiviert</translation>
     </message>
 </context>
 <context>
