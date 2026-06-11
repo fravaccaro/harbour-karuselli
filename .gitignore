@@ -1,0 +1,26 @@
+# Editor / OS
+*~
+.DS_Store
+*.pro.user
+*.pro.user.*
+*.autosave
+
+# qmake / C++ build
+Makefile
+*.o
+moc_*.cpp
+moc_predefs.h
+ui_*.h
+qrc_*.cpp
+documentation.list
+
+# Packaging / deploy
+RPMS/
+build/
+deploy/
+
+# Compiled translations
+*.qm
+
+# Local SDK config
+.sfdk/

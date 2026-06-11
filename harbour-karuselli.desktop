@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=harbour-karuselli
+Exec=harbour-karuselli
+Name=Karuselli
+Comment=Customize your Sailfish OS partner space
+
+[X-Sailjail]
+OrganizationName=org.frapps.karuselli
+ApplicationName=karuselli
+Sandboxing=Disabled
+
+[X-HarbourBackup]
+BackupConfigList=/desktop/lipstick-jolla-home/partnerspace/
