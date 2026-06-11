@@ -16,7 +16,7 @@ A.AboutPageBase {
     extraSections: [
         A.InfoSection {
             title: qsTr("Partner space")
-            text: qsTr("After Apply, restart the homescreen from the pulley menu to see your chosen apps.")
+            text: qsTr("After Apply, restart the Home screen from the pulley menu to see your chosen apps.")
         },
         A.InfoSection {
             title: qsTr("Distribution")

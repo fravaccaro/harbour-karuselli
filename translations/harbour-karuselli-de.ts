@@ -8,7 +8,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>After Apply, restart the homescreen from the pulley menu to see your chosen apps.</source>
+        <source>After Apply, restart the Home screen from the pulley menu to see your chosen apps.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -144,7 +144,7 @@
 <context>
     <name>MainPage</name>
     <message>
-        <source>Restart homescreen</source>
+        <source>Restart the Home screen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -156,7 +156,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Changes saved. Restart the homescreen from the pulley menu to see them.</source>
+        <source>Changes saved. Restart the Home screen from the pulley menu to see them.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -176,7 +176,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Restarting homescreen</source>
+        <source>Restarting the Home screen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

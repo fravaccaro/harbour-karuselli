@@ -12,31 +12,28 @@ Page {
         id: restartRemorse
     }
 
-    SilicaListView {
-        id: selectedAppsView
-        anchors.fill: parent
-        model: partnerController.selectedAppsModel
+    Column {
+        id: bottomPanel
+        anchors {
+            left: parent.left
+            right: parent.right
+            bottom: parent.bottom
+        }
+        visible: partnerController.showRestartHint
+                 || partnerController.partnerSpaceEnabled
+                 || partnerController.dirty
 
-        header: Column {
-            width: parent.width
-
-            PageHeader {
-                title: "Karuselli"
-            }
-
-            LabelSpacer { }
-
-            MuotoTextLabel {
-                visible: partnerController.showRestartHint
-                text: qsTr("Changes saved. Restart the homescreen from the pulley menu to see them.")
-            }
+        MuotoTextLabel {
+            visible: partnerController.showRestartHint
+            text: qsTr("Changes saved. Restart the Home screen from the pulley menu to see them.")
         }
 
-        footer: ButtonLayout {
-            visible: partnerController.partnerSpaceEnabled || partnerController.dirty
+        ButtonLayout {
+            id: applyBar
             x: Theme.horizontalPageMargin
             width: parent.width - 2 * Theme.horizontalPageMargin
             preferredWidth: Theme.buttonWidthSmall
+            visible: partnerController.partnerSpaceEnabled || partnerController.dirty
 
             Button {
                 text: qsTr("Apply")
@@ -46,6 +43,24 @@ Page {
                         return
                 }
             }
+        }
+
+        Item {
+            width: parent.width
+            height: Theme.paddingLarge
+        }
+    }
+
+    SilicaListView {
+        id: selectedAppsView
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.bottom: bottomPanel.top
+        model: partnerController.selectedAppsModel
+
+        header: PageHeader {
+            title: "Karuselli"
         }
 
         ViewDragHandler {
@@ -110,11 +125,21 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: partnerController.partnerSpaceEnabled
-                      ? qsTr("Disable partner space")
-                      : qsTr("Enable partner space")
-                onClicked: partnerController.partnerSpaceEnabled =
-                           !partnerController.partnerSpaceEnabled
+                text: qsTr("About")
+                onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
+            }
+            MenuItem {
+                text: qsTr("Support Karuselli")
+                onClicked: app.showSupportDialog()
+            }
+            MenuItem {
+                text: qsTr("Restart the Home screen")
+                onClicked: {
+                    var controller = partnerController
+                    restartRemorse.execute(
+                        qsTr("Restarting the Home screen"),
+                        function() { controller.restartHomescreen() })
+                }
             }
             MenuItem {
                 text: qsTr("Add app")
@@ -123,23 +148,11 @@ Page {
                 onClicked: pageStack.push(Qt.resolvedUrl("AppPickerPage.qml"))
             }
             MenuItem {
-                text: qsTr("Restart homescreen")
-                onClicked: {
-                    var controller = partnerController
-                    restartRemorse.execute(
-                        qsTr("Restarting homescreen"),
-                        function() { controller.restartHomescreen() })
-                }
-            }
-            MenuItem {
-                text: qsTr("About")
-                onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
-            }
-            MenuItem {
-                // debug
-                visible: true
-                text: qsTr("Support Karuselli")
-                onClicked: app.showSupportDialog()
+                text: partnerController.partnerSpaceEnabled
+                      ? qsTr("Disable partner space")
+                      : qsTr("Enable partner space")
+                onClicked: partnerController.partnerSpaceEnabled =
+                           !partnerController.partnerSpaceEnabled
             }
         }
     }
