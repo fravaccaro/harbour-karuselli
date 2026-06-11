@@ -134,6 +134,7 @@ Page {
                 onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
             }
             MenuItem {
+                visible: false
                 text: qsTr("Support Karuselli")
                 onClicked: app.showSupportDialog()
             }

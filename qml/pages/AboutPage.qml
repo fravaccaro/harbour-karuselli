@@ -21,10 +21,6 @@ A.AboutPageBase {
         A.InfoSection {
             title: qsTr("Native apps")
             text: qsTr("Some native apps show a transparent background in the partner space. This is a Sailfish OS bug, not a Karuselli bug. To display them correctly, install the Patchmanager patch “Blur Partnerspace Background”.")
-        },
-        A.InfoSection {
-            title: qsTr("Distribution")
-            text: qsTr("Runs without Sailjail; intended for sideload or Chum distribution.")
         }
     ]
 }

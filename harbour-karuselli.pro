@@ -61,8 +61,7 @@ INSTALLS += images
 # following CONFIG line
 CONFIG += sailfishapp_i18n
 
-# German translation is enabled as an example. If you aren't
-# planning to localize your app, remember to comment out the
-# following TRANSLATIONS line. And also do not forget to
-# modify the localized app name in the the .desktop file.
-TRANSLATIONS += translations/harbour-karuselli-de.ts
+# Locale-specific translation files (compiled to .qm on build).
+TRANSLATIONS += \
+    translations/harbour-karuselli-en.ts \
+    translations/harbour-karuselli-it.ts
