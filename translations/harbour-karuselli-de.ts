@@ -152,10 +152,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Partner space</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Enable partner space</source>
         <translation type="unfinished"></translation>
     </message>

@@ -37,6 +37,8 @@ OPAL_FILES = $$files($$PWD/qml/modules/Opal/*, true)
 DISTFILES += qml/harbour-karuselli.qml \
     qml/cover/CoverPage.qml \
     qml/components/KaruselliSupportDialog.qml \
+    qml/components/MuotoTextLabel.qml \
+    qml/components/LabelSpacer.qml \
     qml/pages/MainPage.qml \
     qml/pages/AppPickerPage.qml \
     qml/pages/AboutPage.qml \

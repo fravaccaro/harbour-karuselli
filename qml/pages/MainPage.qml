@@ -2,6 +2,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 import Opal.Delegates 1.0 as D
 import Opal.DragDrop 1.0
+import "../components"
 
 Page {
     id: page
@@ -18,10 +19,9 @@ Page {
 
         header: Column {
             width: parent.width
-            spacing: Theme.paddingLarge
 
             PageHeader {
-                title: qsTr("Partner space")
+                title: "Karuselli"
             }
 
             TextSwitch {
@@ -32,21 +32,22 @@ Page {
                 onCheckedChanged: partnerController.partnerSpaceEnabled = checked
             }
 
-            Label {
-                x: Theme.horizontalPageMargin
-                width: parent.width - 2 * Theme.horizontalPageMargin
+            LabelSpacer { }
+
+            MuotoTextLabel {
                 visible: partnerController.showRestartHint
-                wrapMode: Text.WordWrap
-                color: Theme.highlightColor
                 text: qsTr("Changes saved. Restart the homescreen from the pulley menu to see them.")
             }
 
-            Label {
-                x: Theme.horizontalPageMargin
-                width: parent.width - 2 * Theme.horizontalPageMargin
+            LabelSpacer {
+                visible: partnerController.showRestartHint
+                         && partnerController.partnerSpaceEnabled
+                         && partnerController.selectedCount === 0
+            }
+
+            MuotoTextLabel {
                 visible: partnerController.partnerSpaceEnabled
                          && partnerController.selectedCount === 0
-                wrapMode: Text.WordWrap
                 color: Theme.secondaryColor
                 text: qsTr("No apps selected. Tap Add app.")
             }
