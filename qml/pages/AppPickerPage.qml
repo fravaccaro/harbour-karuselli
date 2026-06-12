@@ -7,6 +7,12 @@ Page {
 
     property string searchText: ""
 
+    Component.onCompleted: {
+        partnerController.appModel.filterText = ""
+        searchText = ""
+        searchField.text = ""
+    }
+
     Column {
         anchors.fill: parent
 
@@ -76,6 +82,7 @@ Page {
                         isAndroid: isAndroid,
                         missing: false
                     })
+                    partnerController.appModel.filterText = ""
                     pageStack.pop()
                 }
             }
