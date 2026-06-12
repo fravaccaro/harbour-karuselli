@@ -9,7 +9,7 @@ CoverBackground {
         width: parent.width
         height: sourceSize.height * width / sourceSize.width
         fillMode: Image.PreserveAspectFit
-        opacity: 0.25
+        opacity: 0.1
         source: isLightTheme
                 ? Qt.resolvedUrl("../../images/coverbg-light.png")
                 : Qt.resolvedUrl("../../images/coverbg-dark.png")
@@ -23,7 +23,7 @@ CoverBackground {
         Label {
             width: parent.width
             horizontalAlignment: Text.AlignHCenter
-            color: Theme.primaryColor
+            color: Theme.highlightColor
             visible: !partnerController.partnerSpaceEnabled
                      || partnerController.selectedCount === 0
             text: partnerController.partnerSpaceEnabled
@@ -40,7 +40,7 @@ CoverBackground {
             Label {
                 width: parent.width
                 horizontalAlignment: Text.AlignHCenter
-                color: Theme.primaryColor
+                color: Theme.highlightColor
                 text: name
                 elide: Text.ElideRight
                 maximumLineCount: 1
