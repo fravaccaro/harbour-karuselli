@@ -1,12 +1,13 @@
-Name:       harbour-karuselli
-
-Summary:    Karuselli
-Version:    0.1
-Release:    11
-License:    LICENSE
-URL:        http://example.org/
-Source0:    %{name}-%{version}.tar.bz2
-Requires:   sailfishsilica-qt5 >= 0.10.9
+Name:           harbour-karuselli
+Summary:        Karuselli
+Version:        0.1
+Release:        13
+Group:          Qt/Qt
+License:        GPLv3
+Packager:       fravaccaro <me@fravaccaro.com>
+URL:            https://github.com/uithemer/harbour-karuselli
+Source0:        %{name}-%{version}.tar.bz2
+Requires:       sailfishsilica-qt5 >= 0.10.9
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
