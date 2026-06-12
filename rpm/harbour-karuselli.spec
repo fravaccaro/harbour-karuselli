@@ -1,7 +1,7 @@
 Name:           harbour-karuselli
 Summary:        Karuselli
-Version:        0.1
-Release:        15
+Version:        0.1.0
+Release:        16
 Group:          Qt/Qt
 License:        GPLv3
 Packager:       fravaccaro <me@fravaccaro.com>
