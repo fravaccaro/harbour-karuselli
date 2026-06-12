@@ -2,6 +2,19 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 CoverBackground {
+    Image {
+        id: coverBackground
+
+        anchors.horizontalCenter: parent.horizontalCenter
+        width: parent.width
+        height: sourceSize.height * width / sourceSize.width
+        fillMode: Image.PreserveAspectFit
+        opacity: 0.25
+        source: isLightTheme
+                ? Qt.resolvedUrl("../../images/coverbg-light.png")
+                : Qt.resolvedUrl("../../images/coverbg-dark.png")
+    }
+
     Column {
         anchors.centerIn: parent
         width: parent.width - 2 * Theme.horizontalPageMargin

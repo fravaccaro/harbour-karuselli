@@ -4,7 +4,7 @@ import Sailfish.Silica 1.0
 
 A.AboutPageBase {
     appName: "Karuselli"
-    appIcon: "/usr/share/icons/hicolor/128x128/apps/harbour-karuselli.png"
+    appIcon: Qt.resolvedUrl("../../images/appinfo.png")
     appVersion: "0.1"
     description: qsTr("Customize the Sailfish OS partner space by choosing up to five apps.")
     authors: ["fravaccaro"]

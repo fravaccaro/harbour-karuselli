@@ -2,7 +2,7 @@ Name:       harbour-karuselli
 
 Summary:    Karuselli
 Version:    0.1
-Release:    7
+Release:    11
 License:    LICENSE
 URL:        http://example.org/
 Source0:    %{name}-%{version}.tar.bz2

@@ -43,19 +43,29 @@ DISTFILES += qml/harbour-karuselli.qml \
     qml/pages/AppPickerPage.qml \
     qml/pages/AboutPage.qml \
     $$OPAL_FILES \
+    appicons/86x86/apps/harbour-karuselli.png \
+    appicons/108x108/apps/harbour-karuselli.png \
+    appicons/128x128/apps/harbour-karuselli.png \
+    appicons/172x172/apps/harbour-karuselli.png \
+    appicons/256x256/apps/harbour-karuselli.png \
     images/*.png \
     images/*.png.license \
+    tools/generate-brand-assets.py \
     rpm/harbour-karuselli.changes.in \
     rpm/harbour-karuselli.changes.run.in \
     rpm/harbour-karuselli.spec \
     translations/*.ts \
     harbour-karuselli.desktop
 
-SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
+INSTALLS -= icon
+icon.files =
+
+appicons.files = appicons/*
+appicons.path = /usr/share/icons/hicolor/
 
 images.files = $$files($$PWD/images/*)
 images.path = /usr/share/$$TARGET/images
-INSTALLS += images
+INSTALLS += appicons images
 
 # to disable building translations every time, comment out the
 # following CONFIG line

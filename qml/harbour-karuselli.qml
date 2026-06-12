@@ -7,6 +7,8 @@ import "components"
 ApplicationWindow {
     id: app
 
+    property bool isLightTheme: Theme.colorScheme !== Theme.LightOnDark
+
     function showSupportDialog() {
         askForSupport.show()
     }
