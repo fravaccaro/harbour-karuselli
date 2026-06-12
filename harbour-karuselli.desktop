@@ -10,6 +10,3 @@ Comment=Customize your Sailfish OS partner space
 OrganizationName=org.frapps.karuselli
 ApplicationName=karuselli
 Sandboxing=Disabled
-
-[X-HarbourBackup]
-BackupConfigList=/desktop/lipstick-jolla-home/partnerspace/
