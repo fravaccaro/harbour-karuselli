@@ -12,7 +12,7 @@ Karuselli lets you customize the Sailfish OS **partner space** — the carousel 
 
 [![GitHub issues](https://img.shields.io/github/issues/fravaccaro/harbour-karuselli.svg)](https://github.com/fravaccaro/harbour-karuselli/issues) [![GitHub releases](https://img.shields.io/github/release/fravaccaro/harbour-karuselli.svg)](https://github.com/fravaccaro/harbour-karuselli/releases/latest)
 
-<a href="docs/screenshot.png"><img width="100%" src="docs/screenshot.png" alt="Karuselli screenshot" /></a>
+<a href="docs/screenshot.png"><img width="33%" style="float: left;" src="docs/screenshot.png" alt="Karuselli screenshot" /></a>
 <br style="clear: both; height:5px;" />
 
 ## Features
